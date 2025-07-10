@@ -83,3 +83,7 @@ body.loaded {
 .project-card footer a {
     margin-right: 0.5em;
 }
+
+.list-square {
+    list-style: square !important
+}
