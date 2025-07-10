@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
-
     <script src="js/lila.js"></script>
 </head>
 
@@ -55,7 +53,90 @@
     </header>
 
     <main class="container" id="app-lila">
+        <article>
+            <header>
+                <div class="hero">
+                    <img src="img/andres.webp" alt="Foto de Andrés Paiva Silveira" class="hero-image">
+                    <div class="hero-info">
+                        <h3 class="visible-md visible-xl hidden-sm text-primary">Andrés
+                            Paiva Silveira
+                        </h3>
+                        <h4 class="visible-sm hidden-xl hidden-md text-primary"> Andrés
+                            Paiva Silveira</h4>
+                        <div class="visible-md visible-xl hidden-sm social-icons">
 
+                            <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/" target="_blank"
+                                aria-label="LinkedIn" class="contrast underline-none">
+                                <i class="icon-linkedin icon">linkedin</i>
+                            </a>
+
+                            <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
+                                class="contrast underline-none">
+                                <i class="icon icon-github">github</i>
+                            </a>
+                            <a href="https://seip25.github.io/Lila/" target="_blank" aria-label="Lila-Framework "
+                                class="contrast underline-none">
+                                <i class="material-icons contrast">code</i>
+                            </a>
+                            <a href="https://seip25.github.io/Lila_js" target="_blank" aria-label="Lila-js GitHub"
+                                class="contrast underline-none">
+                                <i class="material-icons">data_object</i>
+                            </a>
+                        </div>
+                        <div class="visible-sm hidden-md hidden-xl">
+                            <div class="flex column">
+                                <div class="social-icons">
+                                    <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/"
+                                        target="_blank" aria-label="LinkedIn" class="contrast underline-none">
+                                        <i class="icon-linkedin icon">linkedin</i>
+                                    </a>
+
+                                    <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
+                                        class="contrast underline-none">
+                                        <i class="icon icon-github">github</i>
+                                    </a>
+                                </div>
+                                <div class="social-icons">
+                                    <a href="https://seip25.github.io/Lila/" target="_blank"
+                                        aria-label="Lila-Framework " class="contrast underline-none">
+                                        <i class="material-icons contrast">code</i>
+                                    </a>
+                                    <a href="https://seip25.github.io/Lila_js" target="_blank"
+                                        aria-label="Lila-js GitHub" class="contrast underline-none">
+                                        <i class="material-icons">data_object</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+            </header>
+            <p class="">
+                Hola,me presento, soy un desarrollador con 5 años de experiencia en programación, incluyendo 3 años de
+                forma
+                autodidacta y 2 años
+                de experiencia profesional en una empresa de desarrollo, que me encuentro actualmente trabajando ,
+                donde profundicé mis habilidades en <code>PHP</code>,<code> Python</code> y <code>JavaScript</code>.
+            </p>
+            <p>
+                Actualmente estoy inmerso en un proyecto personal, el desarrollo de
+                <b class="text-primary"><a href="https://seip25.github.io/Lila/" target="_blank">Lila-Framework</a></b>,
+                un framework de Python web moderno.
+
+            </p>
+            <p>
+                También estoy trabajando en <b class="text-primary"><a href="https://seip25.github.io/Lila_js/"
+                        target="_blank">Lila-js</a></b>, un micro framework de
+                JavaScript reactivo sin dependencias e instalación , el cual utilice para crear esta web.
+            </p>
+            <p>
+                Además de mi experiencia en desarrollo, cuento con una base sólida de 10 años como técnico de PC,
+                redes e impresoras, lo que me brinda una comprensión integral de la infraestructura tecnológica.
+                También tengo 2 años de experiencia en la administración de servidores <code>Linux</code> y
+                <code>Windows</code>.
+            </p>
+        </article>
     </main>
 
     <!-- <footer>
@@ -326,49 +407,46 @@
             creatividad:
         </p>
         <ul>
-            <li class="list-square">Disfruto explorando nuevas tecnologías y aprendiendo sobre diferentes paradigmas de programación.
+            <li class="list-square">Disfruto explorando nuevas tecnologías y aprendiendo sobre diferentes paradigmas de
+                programación.
             </li>
             <li class="list-square">Me apasionan los videojuegos de diversas plataformas, desde PC hasta consolas.</li>
-            <li class="list-square">Soy un aficionado al cine y las series, siempre buscando nuevas historias que descubrir.</li>
-            <li class="list-square">Me gusta mantenerme al tanto de los eventos deportivos, especialmente el fútbol.</li>
+            <li class="list-square">Soy un aficionado al cine y las series, siempre buscando nuevas historias que
+                descubrir.</li>
+            <li class="list-square">Me gusta mantenerme al tanto de los eventos deportivos, especialmente el fútbol.
+            </li>
             <li class="list-square">Disfruto de la música en varios géneros y artistas.</li>
             <li class="list-square">También me interesa la ciencia ficción y la exploración espacial.</li>
-            <li class="list-square">Aprecio el diseño minimalista y la creación de interfaces de usuario intuitivas.</li>
+            <li class="list-square">Aprecio el diseño minimalista y la creación de interfaces de usuario intuitivas.
+            </li>
         </ul>
     </template>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="js/app.js"></script>
     <script>
-        // const { animate } = anime;
+ 
         window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-            // animate({
-            //     targets: 'header nav',
-            //     translateY: [-50, 0],
-            //     opacity: [0, 1],
-            //     duration: 1000,
-            //     easing: 'easeInOutQuad'
-            // });
 
-            // animate({
-            //     targets: 'main h3',
-            //     opacity: [0, 1],
-            //     translateY: [20, 0],
-            //     delay: anime.stagger(200, { from: 'first' }),
-            //     duration: 800,
-            //     easing: 'easeInOutSine'
-            // });
+            document.body.classList.add('loaded');
+            anime({
+                targets: 'header nav',
+                translateY: [-50, 0],
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeInOutQuad'
+            });
+
+            anime({
+                targets: 'main h3 h4',
+                opacity: [0, 1],
+                translateY: [20, 0],
+                delay: anime.stagger(200, { from: 'first' }),
+                duration: 800,
+                easing: 'easeInOutSine'
+            });
         });
 
-        App.createComponent('SobreMi', { template: 'sobre-mi' });
-        App.createComponent('Proyectos', { template: 'proyectos' });
-        App.createComponent('Experiencia', { template: 'experiencia' });
-        App.createComponent('Intereses', { template: 'intereses' });
 
-        App.addRoute('*', 'SobreMi')
-        App.addRoute('/', 'SobreMi');
-        App.addRoute('/proyectos', 'Proyectos');
-        App.addRoute('/experiencia', 'Experiencia');
-        App.addRoute('/intereses', 'Intereses');
-        handleRouting();
     </script>
 </body>
 
