@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Paiva Silveira</title>
+    <link rel="stylesheet" href="css/pico.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+
+    <script src="js/lila.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+               <ul class="hidden-sm visible-xl visible-md container">
+                <li><a href="#/" data-link>Sobre Mí</a></li>
+                <li><a href="#/proyectos" data-link>Proyectos</a></li>
+                <li><a href="#/experiencia" data-link>Experiencia</a></li>
+                <li><a href="#/intereses" data-link>Intereses</a></li>
+            </ul>
+            <ul class="hidden-xl   hidden-md visible-sm">
+                <details class="dropdown">
+                    <summary class="button secondary outline icon-only">
+                        <i class="material-icons">menu</i>
+                    </summary>
+                    <ul>
+                        <li><a href="#/" data-link>Sobre Mí</a></li>
+                        <li><a href="#/proyectos" data-link>Proyectos</a></li>
+                        <li><a href="#/experiencia" data-link>Experiencia</a></li>
+                        <li><a href="#/intereses" data-link>Intereses</a></li>
+
+                    </ul>
+                </details>
+
+            </ul>
+            <ul>
+                <li>
+                    <h5 class="visible-sm hidden-md hidden-xl text-secondary">
+                        Seip25
+                    </h5>
+
+                    <h3 class="visible-xl visible-md hidden-sm text-secondary">
+                        Seip25
+                    </h3>
+                </li>
+            </ul>
+
+         
+        </nav>
+    </header>
+
+    <main class="container" id="app-lila">
+
+    </main>
+
+    <!-- <footer>
+        <p class="container"> Andrés Paiva Silveira. </p>
+    </footer> -->
+
+    <template data-template="sobre-mi">
+        <article>
+            <header>
+                <div class="hero">
+                    <img src="img/andres.webp" alt="Foto de Andrés Paiva Silveira" class="hero-image">
+                    <div class="hero-info">
+                        <h3 class="visible-md visible-xl hidden-sm text-primary">Andrés
+                            Paiva Silveira
+                        </h3>
+                        <h4 class="visible-sm hidden-xl hidden-md text-primary"> Andrés
+                            Paiva Silveira</h4>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/" target="_blank"
+                                aria-label="LinkedIn" class="contrast underline-none">
+                                <i class="icon-linkedin icon">linkedin</i>
+                            </a>
+
+                            <a href="https://github.com/seip25" target="_blank" aria-label="GitHub" class="contrast underline-none">
+                                <i class="icon icon-github">github</i>
+                            </a>
+                            <a href="https://seip25.github.io/Lila/" target="_blank"
+                                aria-label="Lila-Framework " class="contrast underline-none">
+                                <i class="material-icons contrast">code</i>
+                            </a>
+                            <a href="https://seip25.github.io/Lila_js" target="_blank" aria-label="Lila-js GitHub"
+                                class="contrast underline-none">
+                                   <i class="material-icons">data_object</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <p>
+                Hola,me presento soy un desarrollador con 5 años de experiencia en programación, incluyendo 3 años de forma
+                autodidacta y 2 años
+                de experiencia profesional en una empresa de desarrollo, que me encuentro actualmente trabajando ,
+                donde profundicé mis habilidades en PHP, Python y JavaScript.
+            </p>
+            <p>
+                Actualmente estoy inmerso en el desarrollo de
+                <b class="text-primary"><a href="https://seip25.github.io/Lila/" target="_blank">Lila-Framework</a></b>,
+                un framework Python para el desarrollo web moderno.
+
+            </p>
+            <p>
+                También estoy trabajando en <b class="text-primary"><a href="https://seip25.github.io/Lila_js/"
+                        target="_blank">Lila-js</a></b>, un micro framework de
+                JavaScript reactivo , el cual utilice para crear esta web.
+            </p>
+            <p>
+                Además de mi experiencia en desarrollo, cuento con una base sólida de 10 años como técnico de PC,
+                redes e impresoras, lo que me brinda una comprensión integral de la infraestructura tecnológica.
+                También tengo 2 años de experiencia en la administración de servidores Linux y Windows.
+            </p>
+        </article>
+    </template>
+
+    <template data-template="proyectos">
+        <h3>Proyectos Destacados</h3>
+        <div class="grid mt-2">
+            <article>
+                <header>
+                    <h4><span class="text-primary flex center">Lila-Framework (Python)</span></h4>
+                 
+                </header>
+                <p>
+                    Un framework web y poderoso para Python, construido sobre Starlette y Pydantic.
+                    Ideal para desarrolladores que buscan eficiencia y rapidez en la creación de APIs y aplicaciones
+                    web modernas, sin repetir código o tener que "reinventar la rueda".
+                </p>
+                <b>Te dejo el link de Lila-Framework en Pypi <a href="https://pypi.org/project/lila-framework/">Aquí </a></b>
+                <div class="project-summary">
+                    <h5 class="text-secondary">Características principales:</h5>
+                    <ul>
+                        <li>Panel de administración automático con scaffolding.</li>
+                        <li>Sistema de migraciones de base de datos con comandos de terminal.</li>
+                        <li>Generador REST CRUD que permite crear APIs completas para tus modelos con tan solo 20
+                            líneas de código, incluyendo validaciones y middlewares.</li>
+                        <li>
+                            Y mucho más....
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="flex between">
+                    <div>
+                        <a href="https://seip25.github.io/Lila/" target="_blank" class="flex center underline-none ">
+                            <button class="contrast">
+                               Documentación <i class="material-icons">code</i>
+                            </button>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://github.com/seip25/Lila" class="underline-none flex center">
+                            <button class="secondary">
+                                GitHub
+                                <i class="icon icon-github ">code</i>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <footer>
+
+                    <div class="download-badge-container flex gap-1">
+                        Descargas de Lila-Framework: <a href="https://pepy.tech/projects/lila-framework"
+                            target="_blank"><img src="https://static.pepy.tech/badge/lila-framework"
+                                alt="PyPI Downloads"></a>
+                    </div>
+
+                </footer>
+            </article>
+
+            <article  >
+                <header>
+                    <h3>Lila-js (En desarrollo)</h3>
+                    <small>Micro framework JavaScript reactivo</small>
+                </header>
+                <p>
+                    Un micro framework de JavaScript reactivo diseñado para construir interfaces de usuario
+                    interactivas de forma sencilla y rápida.
+                </p>
+                <div class="project-summary">
+                    **Características principales:**
+                    <ul>
+                        <li>Extremadamente ligero, con un peso aproximado de 9KB.</li>
+                        <li>No requiere instalación, listo para ser utilizado directamente en el navegador.</li>
+                        <li>Sistema de ruteo integrado para crear aplicaciones de una sola página (SPA).</li>
+                        <li>Reactividad incorporada para actualizar la interfaz de usuario de forma automática
+                            cuando los datos cambian.</li>
+                        <li>Directivas como `bind` para la vinculación de datos, `data-if` para la renderización
+                            condicional y `data-repeat` para la creación de listas dinámicas.</li>
+                    </ul>
+                </div>
+                <footer>
+                    <a href="https://seip25.github.io/Lila_js/" role="button" class="secondary">Ver Documentación
+                        <span class="material-icons">book</span></a>
+                    <a href="https://github.com/seip25/Lila_js" role="button">GitHub <span
+                            class="material-icons">code</span></a>
+                </footer>
+            </article>
+
+             
+        </div>
+    </template>
+
+    <template data-template="experiencia">
+        <h3>Experiencia</h3>
+        <div class="tech-experience">
+            <h3>Desarrollo de Software</h3>
+            <p>
+                He trabajado profesionalmente durante 2 años en el desarrollo de aplicaciones web utilizando
+                lenguajes como <code>PHP</code>, <code>Python</code> y <code>JavaScript</code>.
+                Mi experiencia incluye el uso de frameworks robustos como
+                <code>Laravel</code>, <code>Express</code>, <code>Django</code> y <code>FastAPI</code>
+                para construir APIs
+                y aplicaciones web escalables.
+            </p>
+        </div>
+        <div class="tech-experience">
+            <h3>Experiencia Técnica</h3>
+            <p>
+                Cuento con una experiencia de 10 años como técnico de PC, redes e impresoras. Esto me ha
+                proporcionado un conocimiento profundo en la resolución de problemas de hardware y software, así
+                como en la configuración y mantenimiento de redes. Además, he administrado servidores
+                <code>Linux</code> y <code>Windows</code> durante 2 años,
+                encargándome de su configuración, seguridad y mantenimiento.
+            </p>
+        </div>
+    </template>
+
+    <template data-template="intereses">
+        <h3>Intereses</h3>
+        <p>
+            Aparte del desarrollo web, tengo una gran variedad de intereses que enriquecen mi perspectiva y
+            creatividad:
+        </p>
+        <ul>
+            <li>Disfruto explorando nuevas tecnologías y aprendiendo sobre diferentes paradigmas de programación.
+            </li>
+            <li>Me apasionan los videojuegos de diversas plataformas, desde PC hasta consolas.</li>
+            <li>Soy un aficionado al cine y las series, siempre buscando nuevas historias que descubrir.</li>
+            <li>Me gusta mantenerme al tanto de los eventos deportivos, especialmente el fútbol.</li>
+            <li>Disfruto de la música en varios géneros y artistas.</li>
+            <li>También me interesa la ciencia ficción y la exploración espacial.</li>
+            <li>Aprecio el diseño minimalista y la creación de interfaces de usuario intuitivas.</li>
+        </ul>
+    </template>
+    <script>
+        // const { animate } = anime;
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            // animate({
+            //     targets: 'header nav',
+            //     translateY: [-50, 0],
+            //     opacity: [0, 1],
+            //     duration: 1000,
+            //     easing: 'easeInOutQuad'
+            // });
+
+            // animate({
+            //     targets: 'main h3',
+            //     opacity: [0, 1],
+            //     translateY: [20, 0],
+            //     delay: anime.stagger(200, { from: 'first' }),
+            //     duration: 800,
+            //     easing: 'easeInOutSine'
+            // });
+        });
+
+        App.createComponent('SobreMi', {
+            template: 'sobre-mi'
+        });
+
+        App.createComponent('Proyectos', {
+            template: 'proyectos'
+        });
+
+
+        App.createComponent('Experiencia', {
+            template: 'experiencia'
+        });
+
+
+        App.createComponent('Intereses', {
+            template: 'intereses'
+        });
+
+        App.addRoute('*', 'SobreMi')
+        App.addRoute('/', 'SobreMi');
+        App.addRoute('/proyectos', 'Proyectos');
+        App.addRoute('/experiencia', 'Experiencia');
+        App.addRoute('/intereses', 'Intereses');
+        handleRouting();
+    </script>
+</body>
+
+</html>
