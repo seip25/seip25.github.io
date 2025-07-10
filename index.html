@@ -5,6 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrés Paiva Silveira</title>
+    <link rel="icon" href="img/lila.ico" />
+
+    <meta property="og:title" content="Andrés Paiva - Desarrollador Web" />
+    <meta property="og:image" content="img/andres.webp" />
+    <meta property="og:description"
+        content="Portfolio de Andrés Paiva Silveira. Creador de Lila-Framework y Lila-js." />
+    <meta property="og:url" content="http://seip25.github.io/" />
     <link rel="stylesheet" href="css/pico.css">
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
@@ -20,6 +27,7 @@
                 <li><a href="#/proyectos" data-link>Proyectos</a></li>
                 <li><a href="#/experiencia" data-link>Experiencia</a></li>
                 <li><a href="#/intereses" data-link>Intereses</a></li>
+
             </ul>
             <ul class="hidden-xl   hidden-md visible-sm">
                 <details class="dropdown">
@@ -228,12 +236,31 @@
                 También tengo 2 años de experiencia en la administración de servidores <code>Linux</code> y
                 <code>Windows</code>.
             </p>
+            <div class="tech-stack flex center wrap  gap-2 mt-4">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="40"
+                    height="40">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                    width="40" height="40">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" width="40" height="40">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
+                    width="40" height="40">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
+                    width="40" height="40">
+                <img src="https://seip25.github.io/Lila/img/lila.png" alt="Lila Framework" width="40" height="40"
+                    style="border-radius: 6px">
+                <img src="https://seip25.github.io/Lila_js/lila.jpeg" alt="Lila JS" width="40" height="40"
+                    style="border-radius: 6px">
+            </div>
+
+            <!-- Sugerencia visual para la sección EXPERIENCIA, justo antes del primer <p> en "Desarrollo de Software" -->
+
         </article>
     </template>
 
     <template data-template="proyectos">
         <h3>Proyectos </h3>
-        <div class="grid mt-2">
+        <div class=" mt-2">
             <article>
                 <header>
                     <h4><span class="text-primary flex center">Lila-Framework (Python)</span></h4>
@@ -299,7 +326,7 @@
                 </footer>
             </article>
 
-            <article>
+            <article class="mt-4">
                 <header>
                     <h3 class="text-primary">Lila-js (JavaScript)</h3>
 
@@ -385,6 +412,36 @@
                 para construir APIs
                 y aplicaciones web escalables.
             </p>
+            <div class="tech-stack flex center wrap  gap-2 mb-3">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="30"
+                    height="30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                    width="30" height="30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript" width="30" height="30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
+                    width="30" height="30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" alt="Django"
+                    width="30" height="30">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI"
+                    width="30" height="30">
+            </div>
+
+            <div class="container skill">
+                <div>
+                    <p>PHP</p>
+                    <progress value="90" max="100"></progress>
+                </div>
+                <div>
+                    <p>Python</p>
+                    <progress value="70" max="100"></progress>
+                </div>
+                <div>
+                    <p>JavaScript</p>
+                    <progress value="60" max="100"></progress>
+                </div>
+            </div>
+
         </div>
         <div class="tech-experience">
             <h3 class="text-primary hidden-sm visible-md visible-xl">Experiencia Técnica</h3>
@@ -397,6 +454,7 @@
                 encargándome de su configuración, seguridad y mantenimiento.
             </p>
         </div>
+
     </template>
 
     <template data-template="intereses">
@@ -421,33 +479,11 @@
             </li>
         </ul>
     </template>
+
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
     <script src="js/app.js"></script>
-    <script>
- 
-        window.addEventListener('load', () => {
+    <script src="js/index.js"></script>
 
-            document.body.classList.add('loaded');
-            anime({
-                targets: 'header nav',
-                translateY: [-50, 0],
-                opacity: [0, 1],
-                duration: 1000,
-                easing: 'easeInOutQuad'
-            });
-
-            anime({
-                targets: 'main h3 h4',
-                opacity: [0, 1],
-                translateY: [20, 0],
-                delay: anime.stagger(200, { from: 'first' }),
-                duration: 800,
-                easing: 'easeInOutSine'
-            });
-        });
-
-
-    </script>
 </body>
 
 </html>

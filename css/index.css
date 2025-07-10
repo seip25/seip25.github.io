@@ -87,3 +87,29 @@ body.loaded {
 .list-square {
     list-style: square !important
 }
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tech-stack img {
+    transition: transform 0.2s ease;
+}
+
+.tech-stack img:hover {
+    transform: scale(1.1);
+}
+i{
+    transition: transform 0.2s ease;
+}
+i:hover{
+    transform: scale(1.1);
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+ 

@@ -3051,7 +3051,6 @@ article footer {
 .flex {
     display: flex;
 }
-
 .column {
     flex-direction: column;
 }
@@ -3247,6 +3246,9 @@ nav details.dropdown summary {
 }
 
 @media (min-width: 1024px) {
+     .grid {
+        grid-template-columns: repeat(auto-fit, minmax(0%, 1fr)) !important
+    }
     .visible-lg { display: block !important; }
     .hidden-lg { display: none !important; }
 }
