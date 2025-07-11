@@ -102,8 +102,7 @@ const Animations = {
 window.addEventListener('load', () => {
     theme();
     document.body.classList.add('loaded');
-    Animations.fadeUp('header nav', 200);
-    Animations.easeOut
+    Animations.fadeUp('header nav', 200); 
 
 });
 
