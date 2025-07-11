@@ -100,19 +100,13 @@ const Animations = {
 
 
 window.addEventListener('load', () => {
-    theme();
+
     document.body.classList.add('loaded');
-    Animations.fadeUp('header nav', 200); 
+    Animations.fadeUp('header nav', 200);
 
 });
 
 
-window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-    theme(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
-})
-document.addEventListener('DOMContentLoaded', () => {
-    theme();
-});
 
 function theme(theme_ = false) {
     let theme = theme_ ? theme_ : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
