@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
 
     document.body.classList.add('loaded');
     anime({
-        targets: 'header nav',
+        targets: 'header nav article',
         translateY: [-50, 0],
         opacity: [0, 1],
         duration: 1000,
