@@ -105,7 +105,10 @@ window.addEventListener('load', () => {
     Animations.fadeUp('header nav', 200);
 
 });
-
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    const newTheme = event.matches ? 'dark' : 'light';
+    theme(newTheme);  
+});
 
 
 function theme(theme_ = false) {
