@@ -103,6 +103,7 @@ window.addEventListener('load', () => {
 
     document.body.classList.add('loaded');
     Animations.fadeUp('header nav', 200);
+    theme();
 
 });
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
