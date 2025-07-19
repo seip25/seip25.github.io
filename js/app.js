@@ -104,6 +104,7 @@ window.addEventListener('load', async() => {
     document.body.classList.add('loaded');
     Animations.fadeUp('header nav', 200);
     await savePageView('POST');
+    theme();
 });
 
 async function savePageView(method = 'GET') {
@@ -115,6 +116,12 @@ async function savePageView(method = 'GET') {
     const response = await request.json();
  
 }
+ 
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+    const newTheme = event.matches ? 'dark' : 'light';
+    theme(newTheme);  
+});
+
 
 function theme(theme_ = false) {
     let theme = theme_ ? theme_ : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
