@@ -99,14 +99,22 @@ const Animations = {
 
 
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async() => {
 
     document.body.classList.add('loaded');
     Animations.fadeUp('header nav', 200);
-
+    await savePageView('POST');
 });
 
-
+async function savePageView(method = 'GET') {
+    const url = 'https://vps-5161722-x.dattaweb.com';
+    const options = {
+        method: method
+    };
+    const request = await fetch(`${url}?page=seip25`, { ...options });
+    const response = await request.json();
+ 
+}
 
 function theme(theme_ = false) {
     let theme = theme_ ? theme_ : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
