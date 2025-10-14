@@ -103,19 +103,11 @@ window.addEventListener('load', async() => {
 
     document.body.classList.add('loaded');
     Animations.fadeUp('header nav', 200);
-    await savePageView('POST');
+ 
     theme();
 });
 
-async function savePageView(method = 'GET') {
-    const url = 'https://vps-5161722-x.dattaweb.com';
-    const options = {
-        method: method
-    };
-    const request = await fetch(`${url}?page=seip25`, { ...options });
-    const response = await request.json();
  
-}
  
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
     const newTheme = event.matches ? 'dark' : 'light';
