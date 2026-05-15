@@ -99,19 +99,44 @@ const Animations = {
 
 
 
-window.addEventListener('load', async() => {
-
+window.addEventListener('load', async () => {
     document.body.classList.add('loaded');
     Animations.fadeUp('header nav', 200);
- 
     theme();
+    initMenu();
 });
 
- 
- 
+function initMenu() {
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const links = mobileMenu.querySelectorAll('a');
+
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        document.body.classList.toggle('overflow-hidden');
+    };
+
+    menuBtn?.addEventListener('click', toggleMenu);
+    closeBtn?.addEventListener('click', toggleMenu);
+    links.forEach(link => link.addEventListener('click', toggleMenu));
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-[#030014]/80', 'backdrop-blur-xl', 'border-b', 'border-white/10');
+        } else {
+            header.classList.remove('bg-[#030014]/80', 'backdrop-blur-xl', 'border-b', 'border-white/10');
+        }
+    });
+}
+
+
+
+
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
     const newTheme = event.matches ? 'dark' : 'light';
-    theme(newTheme);  
+    theme(newTheme);
 });
 
 

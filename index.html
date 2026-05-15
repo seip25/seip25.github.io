@@ -1,437 +1,442 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Andrés Paiva Silveira</title>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#4f46e5">
+    <title>Andrés Paiva Silveira | Portfolio</title>
     <link rel="icon" href="img/lila.ico" />
-
+    <meta name="description" content="Andrés Paiva Silveira." />
+    <meta name="keywords" content="Andrés Paiva Silveira" />
+    <meta name="author" content="Andrés Paiva Silveira" />
     <meta property="og:title" content="Andrés Paiva - Desarrollador Web" />
     <meta property="og:image" content="img/andres.webp" />
-    <meta property="og:description"
-        content="Portfolio de Andrés Paiva Silveira. Creador de Lila-Framework y Lila-js." />
-    <meta property="og:url" content="http://seip25.github.io/" />
-    <link rel="stylesheet" href="css/pico.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta property="og:description" content="Andrés Paiva Silveira." />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#4f46e5', // Indigo (Blue)
+                        secondary: '#10b981', // Emerald (Green)
+                        surface: {
+                            light: '#f8fafc',
+                            dark: '#0f172a'
+                        }
+                    },
+                    boxShadow: {
+                        'm3-1': '0 1px 2px rgba(0,0,0,0.05), 0 1px 3px rgba(0,0,0,0.1)',
+                        'm3-2': '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06)',
+                        'm3-3': '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script src="js/lila.js"></script>
+    <style>
+        .m3-card {
+            @apply bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-m3-1 hover:shadow-m3-2 transition-all duration-300;
+        }
+
+        .m3-btn-primary {
+            @apply px-6 py-2.5 bg-primary text-white rounded-full font-medium shadow-m3-1 hover:shadow-m3-2 hover:bg-opacity-90 transition-all;
+        }
+
+        .m3-btn-secondary {
+            @apply px-6 py-2.5 bg-secondary text-white rounded-full font-medium shadow-m3-1 hover:shadow-m3-2 hover:bg-opacity-90 transition-all;
+        }
+
+        .text-gradient {
+            @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <nav class="container">
-            <ul class="   visible-sm hidden-md hidden-xl">
-                <li class="flex column">
-                    <a href="#/" data-link>Sobre Mí</a>
+<body
+    class="bg-slate-50 text-slate-900 dark:bg-[#0f172a] dark:text-slate-300 antialiased selection:bg-primary/20 selection:text-primary">
 
-                    <a href="#/intereses" data-link>Intereses</a>
+    <header
+        class="sticky top-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur-lg border-b border-slate-200 dark:border-slate-800">
+        <nav class="container mx-auto px-6 py-4 flex items-center justify-between max-w-5xl">
+            <a href="#/" data-link class="flex items-center gap-3 font-bold text-slate-900 dark:text-white">
+                <div
+                    class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+                    <span class="text-white text-lg">AP</span>
+                </div>
+                <span class="hidden sm:inline tracking-tight">Andrés Paiva</span>
+            </a>
 
-                </li>
-            </ul>
-            <ul class="   visible-sm hidden-md hidden-xl">
-                <li class="flex column">
-                    <a href="#/experiencia" data-link>Experiencia</a>
-
-                    <a href="#/proyectos" data-link>Proyectos</a>
-                </li>
-
-            </ul>
-
-            <ul class=" container visible-md visible-xl hidden-sm">
-                <li><a href="#/" data-link>Sobre Mí</a></li>
-                <li><a href="#/proyectos" data-link>Proyectos</a></li>
-                <li><a href="#/experiencia" data-link>Experiencia</a></li>
-                <li><a href="#/intereses" data-link>Intereses</a></li>
-
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container" id="app-lila">
-        <article>
-            <header>
-                <div class="hero">
-                    <img src="img/andres.webp" alt="Foto de Andrés Paiva Silveira" class="hero-image">
-                    <div class="hero-info">
-                        <h3 class="visible-md visible-xl hidden-sm text-primary">Andrés
-                            Paiva Silveira
-                        </h3>
-                        <h4 class="visible-sm hidden-xl hidden-md text-primary"> Andrés
-                            Paiva Silveira</h4>
-                        <div class="visible-md visible-xl hidden-sm social-icons">
-
-                            <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/" target="_blank"
-                                aria-label="LinkedIn" class="contrast underline-none">
-                                <i class="icon-linkedin icon">linkedin</i>
-                            </a>
-
-                            <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
-                                class="contrast underline-none">
-                                <i class="icon icon-github">github</i>
-                            </a>
-                            <a href="https://seip25.github.io/Lila/" target="_blank" aria-label="Lila-Framework "
-                                class="contrast underline-none">
-                                <i class="material-icons contrast">code</i>
-                            </a>
-
-                        </div>
-                        <div class="visible-sm hidden-md hidden-xl">
-                            <div class="flex column">
-                                <div class="social-icons">
-                                    <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/"
-                                        target="_blank" aria-label="LinkedIn" class="contrast underline-none">
-                                        <i class="icon-linkedin icon">linkedin</i>
-                                    </a>
-
-                                    <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
-                                        class="contrast underline-none">
-                                        <i class="icon icon-github">github</i>
-                                    </a>
-                                </div>
-                                <div class="social-icons">
-                                    <a href="https://seip25.github.io/Lila/" target="_blank"
-                                        aria-label="Lila-Framework " class="contrast underline-none">
-                                        <i class="material-icons contrast">code</i>
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-            </header>
-            <p class="">
-                Hola, me presento, soy un desarrollador con 5 años de experiencia en programación, incluyendo 3 años de
-                forma
-                autodidacta y 2 años
-                de experiencia profesional en una empresa de desarrollo, que me encuentro actualmente trabajando ,
-                donde profundicé mis habilidades en <code>PHP</code>,<code> Python</code> y <code>JavaScript</code>.
-            </p>
-            <p>
-                Actualmente estoy inmerso en un proyecto personal, el desarrollo de
-                <b class="text-primary"><a href="https://seip25.github.io/Lila/" target="_blank">Lila-Framework</a></b>,
-                un framework web moderno desarrollado en Python.
-            </p>
-
-            <p>
-                También creé <b class="text-primary"><a href="https://seip25.github.io/Blue-bird/" target="_blank">Blue Bird</a></b>, 
-                Una estructura potente basada en Express y React, diseñada para crear aplicaciones rápidamente y todo lo que necesitas pre-configurado.
-            </p>
-
-
-            <p>
-                Además de mi experiencia en desarrollo, cuento con una base sólida de 10 años como técnico de PC,
-                redes e impresoras, lo que me brinda una comprensión integral de la infraestructura tecnológica.
-                También tengo 2 años de experiencia en la administración de servidores <code>Linux</code> y
-                <code>Windows</code>.
-            </p>
-        </article>
-    </main>
-
-    <!-- <footer>
-        <p class="container"> Andrés Paiva Silveira. </p>
-    </footer> -->
-
-
-    <template data-template="sobre-mi">
-        <article>
-            <header>
-                <div class="hero">
-                    <img src="img/andres.webp" alt="Foto de Andrés Paiva Silveira" class="hero-image">
-                    <div class="hero-info">
-                        <div class="visible-md visible-xl hidden-sm ">
-                            <h3 class="text-primary">Andrés
-                                Paiva Silveira
-                            </h3>
-                            <h4 class="text-secondary">
-                                Desarrollador Web Full Stack
-                            </h4>
-                        </div>
-                        <div class="visible-sm hidden-xl hidden-md ">
-                            <h4 class="text-primary"> Andrés
-                                Paiva Silveira</h4>
-                            <h5 class="text-secondary">
-                                Desarrollador Web Full Stack
-                            </h5>
-                        </div>
-
-                        <div class="visible-md visible-xl hidden-sm social-icons">
-
-                            <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/" target="_blank"
-                                aria-label="LinkedIn" class="contrast underline-none">
-                                <i class="icon-linkedin icon">linkedin</i>
-                            </a>
-
-                            <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
-                                class="contrast underline-none">
-                                <i class="icon icon-github">github</i>
-                            </a>
-                            <a href="https://seip25.github.io/Lila/" target="_blank" aria-label="Lila-Framework "
-                                class="contrast underline-none">
-                                <i class="material-icons contrast">code</i>
-                            </a>
-
-
-                        </div>
-                        <div class="visible-sm hidden-md hidden-xl">
-                            <div class="flex column">
-                                <div class="social-icons">
-                                    <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/"
-                                        target="_blank" aria-label="LinkedIn" class="contrast underline-none">
-                                        <i class="icon-linkedin icon">linkedin</i>
-                                    </a>
-
-                                    <a href="https://github.com/seip25" target="_blank" aria-label="GitHub"
-                                        class="contrast underline-none">
-                                        <i class="icon icon-github">github</i>
-                                    </a>
-                                </div>
-                                <div class="social-icons">
-                                    <a href="https://seip25.github.io/Lila/" target="_blank"
-                                        aria-label="Lila-Framework " class="contrast underline-none">
-                                        <i class="material-icons contrast">code</i>
-                                    </a>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-            </header>
-            <p class="">
-                Hola,me presento, soy un desarrollador de Uruguay(🇺🇾) con 5 años de experiencia en programación,
-                incluyendo 3 años de
-                forma
-                autodidacta y 2 años
-                de experiencia profesional en una empresa de desarrollo, que me encuentro actualmente trabajando ,
-                donde profundicé mis habilidades en <code>PHP</code>,<code> Python</code> y <code>JavaScript</code>.
-            </p>
-            <p>
-                Actualmente estoy inmerso en un proyecto personal, el desarrollo de
-                <b class="text-primary"><a href="https://seip25.github.io/Lila/" target="_blank">Lila-Framework</a></b>,
-                un framework web moderno desarrollado en Python.
-            </p>
-
-             <p>
-                También creé <b class="text-primary"><a href="https://seip25.github.io/Blue-bird/" target="_blank">Blue Bird</a></b>,
-                Una estructura potente basada en Express y React, diseñada para crear aplicaciones rápidamente y todo lo que necesitas pre-configurado.
-            </p>
-
-
-
-
-            <p>
-                Además de mi experiencia en desarrollo, cuento con una base sólida de 10 años como técnico de PC,
-                redes e impresoras, lo que me brinda una comprensión integral de la infraestructura tecnológica.
-                También tengo 2 años de experiencia en la administración de servidores <code>Linux</code> y
-                <code>Windows</code>.
-            </p>
-
-
-            <div class="tech-stack flex center wrap  gap-2 mt-4">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" width="40"
-                    height="40">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
-                    width="40" height="40">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                    alt="JavaScript" width="40" height="40">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" alt="Laravel"
-                    width="40" height="40">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React"
-                    width="40" height="40">
-                <img src="https://seip25.github.io/Lila/img/lila.png" alt="Lila Framework" width="40" height="40"
-                    style="border-radius: 6px">
-
+            <div class="hidden md:flex items-center gap-1 text-sm font-medium">
+                <a href="#/" data-link
+                    class="px-4 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Sobre
+                    Mí</a>
+                <a href="#/proyectos" data-link
+                    class="px-4 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Proyectos</a>
+                <a href="#/experiencia" data-link
+                    class="px-4 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Experiencia</a>
+                <a href="#/intereses" data-link
+                    class="px-4 py-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Intereses</a>
             </div>
 
+            <button id="mobile-menu-toggle"
+                class="md:hidden p-2 text-slate-500 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+                <span class="material-icons">menu</span>
+            </button>
+        </nav>
 
+        <!-- Mobile Nav -->
+        <div id="mobile-nav"
+            class="hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 md:hidden overflow-hidden transition-all duration-300">
+            <div class="flex flex-col p-6 gap-2 text-sm font-medium">
+                <a href="#/" data-link
+                    class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Sobre
+                    Mí</a>
+                <a href="#/proyectos" data-link
+                    class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Proyectos</a>
+                <a href="#/experiencia" data-link
+                    class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Experiencia</a>
+                <a href="#/intereses" data-link
+                    class="px-4 py-3 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">Intereses</a>
+            </div>
+        </div>
+    </header>
 
+    <main class="container mx-auto px-6 py-12 max-w-4xl min-h-[70vh]" id="app-lila">
+        <!-- Initial Load Content -->
+        <section class="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <div class="flex flex-col md:flex-row gap-10 items-center md:items-start text-center md:text-left">
+                <div class="relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-tr from-primary to-secondary rounded-[2.5rem] blur opacity-25">
+                    </div>
+                    <img src="img/andres.webp" alt="Andrés Paiva"
+                        class="relative w-40 h-40 md:w-52 md:h-52 rounded-[2rem] object-cover shadow-2xl">
+                </div>
+                <div class="space-y-6 flex-1">
+                    <div class="space-y-2">
+                        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+                            Andrés Paiva Silveira</h1>
+                        <p class="text-xl font-semibold text-gradient">Full Stack Developer & Toolmaker</p>
+                    </div>
+                    <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400">Desarrollador con 5 años de
+                        experiencia, especializado en backend y automatización. Creador de Lila-Framework y apasionado
+                        por el código limpio y eficiente.</p>
+                    <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#/proyectos" data-link class="m3-btn-primary flex items-center gap-2">
+                            <span class="material-icons text-sm">rocket</span> Ver Proyectos
+                        </a>
+                        <div class="flex gap-2">
+                            <a href="https://github.com/seip25" target="_blank"
+                                class="w-11 h-11 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-slate-600 dark:text-slate-400">
+                                <span class="material-icons">code</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/andres-paiva-silveira-88b65a207/" target="_blank"
+                                class="w-11 h-11 flex items-center justify-center rounded-full border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all text-slate-600 dark:text-slate-400">
+                                <span class="material-icons">person</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-        </article>
+    <footer class="bg-slate-100 dark:bg-slate-950/50 mt-12">
+        <div
+            class="container mx-auto px-6 py-12 max-w-4xl flex flex-col md:flex-row justify-between items-center gap-8 border-t border-slate-200 dark:border-slate-800">
+            <div class="space-y-2 text-center md:text-left">
+                <p class="font-bold text-slate-900 dark:text-white">Andrés Paiva Silveira</p>
+            </div>
+            <div class="flex gap-6 text-sm font-medium">
+                <a href="https://github.com/seip25"
+                    class="text-slate-500 hover:text-primary transition-colors">GitHub</a>
+                <a href="https://seip25.github.io/Lila/"
+                    class="text-slate-500 hover:text-primary transition-colors">Lila Framework</a>
+                <a href="https://www.paypal.com/donate/?business=C65NYY5JGJZDS&no_recurring=0&item_name=Si+te+gusta+mi+trabajo%2C+puedes+apoyarme.%0ALas+donaciones+me+ayudan+a+dedicar+m%C3%A1s+tiempo+a+mejorar+mis+proyectos&currency_code=USD"
+                    class="text-secondary hover:underline transition-colors font-bold">Apoyar</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Templates -->
+    <template data-template="sobre-mi">
+        <section class="space-y-12">
+            <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <img src="img/andres.webp" alt="Andrés Paiva"
+                    class="w-15 h-32 md:w-15 md:h-40 rounded-[2rem] object-cover shadow-xl border-4 border-white dark:border-slate-800">
+                <div class="space-y-4 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Sobre Mí</h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-400">Desarrollador Full Stack de Uruguay (🇺🇾)
+                        enfocado en la excelencia técnica y el impacto real de cada línea de código.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="m3-card p-8 space-y-6">
+                    <h3 class="text-xl font-bold flex items-center gap-2 text-primary">
+                        <span class="material-icons">history_edu</span> Mi Historia
+                    </h3>
+                    <div class="space-y-4 text-sm leading-relaxed">
+                        <p>He pasado de ser un apasionado autodidacta a un profesional del desarrollo, profundizando en
+                            ecosistemas como PHP, Python y JavaScript.</p>
+                        <p>Mi base sólida de 10 años en infraestructura me permite construir software que entiende el
+                            hardware y el entorno en el que vive.</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest pl-2">Core Stack</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 m3-card flex items-center gap-3">
+                            <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+                                <span class="material-icons text-sm">settings</span>
+                            </div>
+                            <span class="font-semibold text-sm">Backend</span>
+                        </div>
+                        <div class="p-4 m3-card flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 bg-secondary/10 rounded-lg flex items-center justify-center text-secondary">
+                                <span class="material-icons text-sm">web</span>
+                            </div>
+                            <span class="font-semibold text-sm">Frontend</span>
+                        </div>
+                        <div class="p-4 m3-card flex items-center gap-3">
+                            <div
+                                class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center text-orange-600">
+                                <span class="material-icons text-sm">storage</span>
+                            </div>
+                            <span class="font-semibold text-sm">Database</span>
+                        </div>
+                        <div class="p-4 m3-card flex items-center gap-3">
+                            <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600">
+                                <span class="material-icons text-sm">cloud</span>
+                            </div>
+                            <span class="font-semibold text-sm">DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </template>
 
     <template data-template="proyectos">
-        <h3>Proyectos </h3>
-        <div class=" mt-2">
-            <article>
-                <header>
-                    <h4><span class="text-primary flex center">Lila-Framework (Python)</span></h4>
-
-                </header>
-                <p>
-                    Un framework web completo y poderoso para Python, construido sobre Starlette y Pydantic.
-                    Mi motivación principal al crear Lila-Framework fue profundizar mi comprensión de Python y facilitar
-                    el desarrollo web rápido, evitando la repetición de código en tareas comunes.
-                </p>
-                <p>
-
-                </p>
-                <b>Te dejo el link de Lila-Framework en Pypi
-                    <a href="https://pypi.org/project/lila-framework/" target="_blank">Aquí </a>
-                </b>
-                <div class="project-summary">
-                    <h5 class="text-secondary">Características principales:</h5>
-                    <ul>
-                        <li class="list-square">Panel de administración automático con scaffolding, simplificando la
-                            gestión de datos.</li>
-                        <li class="list-square">Sistema de migraciones de base de datos con comandos de terminal,
-                            facilitando la gestión de esquemas.</li>
-                        <li class="list-square">Generador REST CRUD que permite crear APIs completas para tus modelos
-                            con tan solo 20 líneas de código, incluyendo documentación automática (Swagger),
-                            validaciones y middlewares.</li>
-                        <li class="list-square">
-                            Documentación automática utilizando Swagger UI.
-                        </li class="list-square">
-                        <li class="list-square">Renderizado de archivos Markdown directamente en tus plantillas.</li>
-                        <li class="list-square">
-                            Y mucho más.... (sencillo de instalar con <code>pip install lila-framework</code>
-                            y de inicializar con <code>lila-init</code>).
-                        </li>
-
-                    </ul>
+        <section class="space-y-10">
+            <div class="flex justify-between items-end">
+                <div class="space-y-2">
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Proyectos</h2>
+                    <p class="text-slate-500">Soluciones de software con alma y técnica.</p>
                 </div>
-                <div class="flex between">
-                    <div>
-                        <a href="https://seip25.github.io/Lila/" target="_blank" class="flex center underline-none ">
-                            <button class="contrast">
-                                Documentación
-                            </button>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://github.com/seip25/Lila" target="_blank" class="underline-none flex center">
-                            <button class="secondary">
-                                GitHub
-                            </button>
-                        </a>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8">
+                <div class="m3-card overflow-hidden group">
+                    <div class="p-1 bg-gradient-to-r from-primary to-secondary"></div>
+                    <div class="p-8 md:p-10 flex flex-col md:flex-row gap-8 items-start">
+                        <div
+                            class="w-16 h-16 md:w-24 md:h-24 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <img src="https://seip25.github.io/Lila/img/lila.png" alt="Lila"
+                                class="w-12 h-12 md:w-16 md:h-16 rounded-xl">
+                        </div>
+                        <div class="flex-1 space-y-6">
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <h3 class="text-2xl font-bold text-slate-900 dark:text-white">Lila-Framework</h3>
+                                    <a href="https://github.com/seip25/Lila" target="_blank"
+                                        class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-icons">open_in_new</span>
+                                    </a>
+                                </div>
+                                <p class="text-lg text-slate-600 dark:text-slate-400">Ecosistema web potente para
+                                    Python.</p>
+                            </div>
+                            <p class="text-sm leading-relaxed">Automatiza la creación de APIs REST, administración de
+                                datos y documentación técnica bajo una arquitectura sólida y fácil de usar.</p>
+                            <div class="flex flex-wrap gap-3">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">Python</span>
+                                <span
+                                    class="px-3 py-1 bg-secondary/10 text-secondary text-xs font-bold rounded-full">Automated
+                                    CRUD</span>
+                                <span
+                                    class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-xs font-bold rounded-full">Swagger
+                                    UI</span>
+                            </div>
+                            <div class="pt-4 border-t border-slate-100 dark:border-slate-800 flex gap-6">
+                                <a href="https://seip25.github.io/Lila/" target="_blank"
+                                    class="text-primary font-bold text-sm hover:underline">Ver Documentación</a>
+                                <a href="https://pypi.org/project/lila-framework/" target="_blank"
+                                    class="text-slate-500 font-bold text-sm hover:text-primary">PyPI Package</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <footer>
+            </div>
 
-                    <div class="download-badge-container flex gap-1">
-                        Descargas de Lila-Framework: <a href="https://pepy.tech/projects/lila-framework"
-                            target="_blank"><img src="https://static.pepy.tech/badge/lila-framework"
-                                alt="PyPI Downloads"></a>
-                    </div>
-
-                </footer>
-            </article>
-
-
-        </div>
-
-        <div class="flex center items-center gap-1 mt-2">
-            <small class="text-secondary">Si te gusta mi trabajo, puedes apoyarme </small>
-            <br>
-            <a href="https://www.paypal.com/donate/?business=C65NYY5JGJZDS&no_recurring=0&item_name=Si+te+gusta+mi+trabajo%2C+puedes+apoyarme.%0ALas+donaciones+me+ayudan+a+dedicar+m%C3%A1s+tiempo+a+mejorar+mis+proyectos&currency_code=USD"
-                target="_blank">
-                <img src="https://img.shields.io/badge/Donar-PayPal-0070ba?style=flat&logo=paypal"
-                    alt="Donar via PayPal">
-            </a>
-        </div>
+            <div class="p-8 m3-card border-dashed bg-slate-50 dark:bg-slate-900/50 text-center space-y-4">
+                <p class="text-slate-600 dark:text-slate-400">Si te apasiona el desarrollo eficiente, puedes apoyar el
+                    mantenimiento de mis herramientas.</p>
+                <a href="https://www.paypal.com/donate/?business=C65NYY5JGJZDS&no_recurring=0&item_name=Si+te+gusta+mi+trabajo%2C+puedes+apoyarme.%0ALas+donaciones+me+ayudan+a+dedicar+m%C3%A1s+tiempo+a+mejorar+mis+proyectos&currency_code=USD"
+                    target="_blank" class="m3-btn-secondary inline-flex items-center gap-2">
+                    <span class="material-icons text-sm">favorite</span> Donar con PayPal
+                </a>
+            </div>
+        </section>
     </template>
 
     <template data-template="experiencia">
-        <section>
-            <h3 class="hidden-sm visible-md visible-xl">Experiencia</h3>
-            <h4 class="visible-sm hidden-md hidden-xl">Experiencia</h4>
-            <div class="tech-experience">
-                <h3 class="text-primary hidden-sm visible-md visible-xl">Desarrollo de Software</h3>
-                <h4 class="text-primary hidden-xl hidden-md visible-sm">Desarrollo de Software</h4>
-                <p>
-                    He trabajado profesionalmente durante 2 años en el desarrollo de aplicaciones web utilizando
-                    lenguajes como <code>PHP</code>, <code>Python</code> y <code>JavaScript</code>.
-                    Mi experiencia incluye el uso de frameworks robustos como
-                    <code>Laravel</code>, <code>Express</code>, <code>FastAPI</code>,
-                    pero sobre todo mis ultimos 4 proyectos han sido en <b><code>Lila-Framework</code></b>
-                    para construir APIs
-                    y aplicaciones web escalables.
-                </p>
-                <div class="tech-stack flex center wrap  gap-2 mb-3">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
-                        width="30" height="30">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                        alt="Python" width="30" height="30">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                        alt="JavaScript" width="30" height="30">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg"
-                        alt="Laravel" width="30" height="30">
+        <section class="space-y-12">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Experiencia & Dominio</h2>
 
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
-                        alt="FastAPI" width="30" height="30">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="space-y-8">
+                    <div class="relative pl-8 border-l-4 border-primary/20 space-y-12">
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[42px] top-1 w-6 h-6 rounded-full bg-primary border-4 border-white dark:border-slate-950 shadow-lg shadow-primary/30">
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Desarrollo Profesional</h3>
+                            <p class="text-sm font-bold text-secondary mb-3 tracking-wider">2018 — PRESENTE</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                Experto en optimización de backend y arquitecturas desacopladas.
+                                Experiencia en sistemas webs de alto tráfico y arquitectura escalable.
+                                Apis RESTful, microservicios , webs con alta disponibilidad y seguridad.
+                                Bases de datos relacionales y no relacionales, optimización de consultas y
+                                escalabilidad.
 
-                    <img src="https://seip25.github.io/Lila/img/lila.png" alt="Lila Framework" width="30" height="30"
-                        style="border-radius: 6px">
+                            </p>
+                        </div>
 
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[42px] top-1 w-6 h-6 rounded-full bg-slate-400 border-4 border-white dark:border-slate-950 shadow-lg shadow-slate-400/30">
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 dark:text-white">Infraestructura Crítica</h3>
+                            <p class="text-sm font-bold text-slate-400 mb-3 tracking-wider">2014 — 2022</p>
+                            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                10 años resolviendo problemas en el mundo real: redes, servidores y hardware. La base
+                                técnica de mi carrera como desarrollador.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="container skill">
-                    <div>
-                        <p>JavaScript</p>
-                        <progress value="70" max="100"></progress>
+                <div class="m3-card p-8 space-y-8">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white">Habilidades Técnicas</h3>
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Backend
+                                    Architect</span>
+                                <span class="text-xs font-bold text-primary">85%</span>
+                            </div>
+                            <div class="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden p-0.5">
+                                <div
+                                    class="h-full bg-gradient-to-r from-primary to-indigo-400 rounded-full w-[85%] shadow-sm shadow-primary/20">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">Frontend
+                                    Development</span>
+                                <span class="text-xs font-bold text-secondary">70%</span>
+                            </div>
+                            <div class="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden p-0.5">
+                                <div
+                                    class="h-full bg-gradient-to-r from-secondary to-emerald-400 rounded-full w-[70%] shadow-sm shadow-secondary/20">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-end">
+                                <span class="text-sm font-bold text-slate-700 dark:text-slate-300">SysAdmin /
+                                    DevOps</span>
+                                <span class="text-xs font-bold text-slate-400">90%</span>
+                            </div>
+                            <div class="h-3 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden p-0.5">
+                                <div class="h-full bg-slate-400 dark:bg-slate-600 rounded-full w-[90%]"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p>PHP</p>
-                        <progress value="60" max="100"></progress>
-                    </div>
-
-                    <div>
-                        <p>Python</p>
-                        <progress value="50" max="100"></progress>
-                    </div>
-
                 </div>
-
             </div>
-            <div class="tech-experience">
-                <h3 class="text-primary hidden-sm visible-md visible-xl">Experiencia Técnica</h3>
-                <h4 class="text-primary hidden-xl hidden-md visible-sm">Experiencia Técnica</h4>
-                <p>
-                    Cuento con una experiencia de 10 años como técnico de PC, redes e impresoras. Esto me ha
-                    proporcionado un conocimiento profundo en la resolución de problemas de hardware y software, así
-                    como en la configuración y mantenimiento de redes. Además, he administrado servidores
-                    <code>Linux</code> y <code>Windows</code> durante 2 años,
-                    encargándome de su configuración, seguridad y mantenimiento.
-                </p>
-            </div>
-
         </section>
     </template>
 
     <template data-template="intereses">
-        <section>
-            <h3 class="hidden-sm visible-md visible-xl">Intereses</h3>
-            <h4 class="visible-sm hidden-md hidden-xl">Intereses</h4>
-            <p>
-                Aparte del desarrollo web, tengo una gran variedad de intereses que enriquecen mi perspectiva y
-                creatividad:
-            </p>
-            <ul>
-                <li class="list-square">Disfruto explorando nuevas tecnologías y aprendiendo sobre diferentes paradigmas
-                    de
-                    programación.
-                </li>
-                <li class="list-square">Me apasionan los videojuegos de diversas plataformas, desde PC hasta consolas.
-                </li>
-                <li class="list-square">Soy un aficionado al cine y las series, siempre buscando nuevas historias que
-                    descubrir.</li>
-                <li class="list-square">Me gusta mantenerme al tanto de los eventos deportivos, especialmente el fútbol.
-                </li>
-                <li class="list-square">Disfruto de la música en varios géneros y artistas.</li>
-                <li class="list-square">También me interesa la ciencia ficción y la exploración espacial.</li>
-                <li class="list-square">Aprecio el diseño minimalista y la creación de interfaces de usuario intuitivas.
-                </li>
-            </ul>
+        <section class="space-y-12">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white">Intereses</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="m3-card p-6 text-center space-y-4 hover:border-primary/50">
+                    <div
+                        class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto">
+                        <span class="material-icons">terminal</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white">Software</h3>
+                        <p class="text-xs text-slate-500">Nuevos paradigmas.</p>
+                    </div>
+                </div>
+                <div class="m3-card p-6 text-center space-y-4 hover:border-secondary/50">
+                    <div
+                        class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-secondary mx-auto">
+                        <span class="material-icons">sports_esports</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white">Gaming</h3>
+                        <p class="text-xs text-slate-500">PC & Consolas.</p>
+                    </div>
+                </div>
+                <div class="m3-card p-6 text-center space-y-4 hover:border-orange-500/50">
+                    <div
+                        class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 mx-auto">
+                        <span class="material-icons">movie</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white">Cine</h3>
+                        <p class="text-xs text-slate-500">Sci-Fi & Series.</p>
+                    </div>
+                </div>
+                <div class="m3-card p-6 text-center space-y-4 hover:border-blue-500/50">
+                    <div
+                        class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mx-auto">
+                        <span class="material-icons">palette</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white">Diseño</h3>
+                        <p class="text-xs text-slate-500">Minimalismo.</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </template>
 
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
-    <script src="js/app.js?v=4.1"></script>
+    <script src="js/app.js?v=4.3"></script>
+    <script>
+        // Simple Mobile Menu Logic
+        const btn = document.getElementById('mobile-menu-toggle');
+        const nav = document.getElementById('mobile-nav');
+        btn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+        nav.querySelectorAll('a').forEach(l => l.addEventListener('click', () => nav.classList.add('hidden')));
+    </script>
 
 </body>
 
